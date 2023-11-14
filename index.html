@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign and login form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <span></span>
+    <span></span>
+    <span></span>
+    <form action="/login" method="post" autocomplete="off"  id="signinform">
+      <h2 class="page-header text-primary">Login</h2>
+      <div class="inputbox form-group">
+        <!-- <label>Username</label> -->
+        <input type="text" placeholder="Username">
+      </div>
+      <div class="inputbox form-group">
+        <!-- <label>Password</label> -->
+        <input type="password" placeholder="password">
+      </div>
+      <div class="inputbox form-group">
+      
+        <a href="#">Forgot password</a>
+        <a href="#" id="signup">Signup</a>
+      </div>
+      <div class="inputbox form-group">
+        <input type="submit" value="sign in">
+      </div>
+    </form>
+
+    <form id="signupform">
+      <h2>Registration</h2>
+      <div class="inputbox">
+        <input type="text" placeholder="Username">
+      </div>
+      <div class="inputbox">
+        <input type="email" placeholder="Email address">
+      </div>
+      <div class="inputbox">
+        <input type="password" placeholder="Create password">
+      </div>
+      <div class="inputbox">
+        <input type="password" placeholder="Confirm password">
+      </div>
+      <div class="inputbox">
+        <input type="submit" value="Register Account">
+      </div>
+      <div class="inputbox group">
+        <a href="#">Already Have an Account ? <b id="signin">Login</b></a>
+      </div>
+    </form>
+  </div>
+      <script>
+        let signup= document.querySelector('#signup');
+        let signin= document.querySelector('#signin')
+        let body= document.querySelector('body');
+        signup.onclick = function(){
+          body.classList.add('signup');
+        }
+        signin.onclick = function(){
+          body.classList.add('signin');
+        }
+      </script> 
+</body>
+</html>
